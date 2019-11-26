@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<h1>Basic Calculator</h1>
+<div>
+	<label>Enter first number</label><br>	
+	<input type = "text" id = "result1"><br><br>
+	<label>Enter second number</label><br>
+	<input type = "text" id = "result2"><br><br>
+	<label>Select which operation want</label>
+	<select id = "opr"> 
+      <option value = "+" >Addition</option>
+      <option value = "-" >Subtraction</option>
+      <option value = "*" >Multiplication</option>
+      <option value = "/" >Division</option>
+    </select>
+	<button onclick = "solve()">Calculate</button><br><br>
+	<label>Result </label>
+	<input type="text" id="result3">
+</div>
+<script type ="text/javascript">
+	function solve()
+	{
+		x = document.getElementById('result1').value;
+		
+		y = document.getElementById('result2').value;
+
+		z = document.getElementById("opr").value;
+
+	 	if(z=="+")
+		{
+		w =  parseInt(x) +  parseInt(y);
+		document.getElementById("result3").value=w;
+		
+		}
+		if(z == "-")
+		{
+		w = x - y;
+
+		document.getElementById("result3").value= w ;
+		}
+		if(z == "*")
+		{
+		w=x * y;
+
+		document.getElementById("result3").value= w;	
+		}
+		if(z=="/") 
+		{
+		w= parseFloat(x) /  parseFloat(y);
+		document.getElementById("result3").value= w;	
+		}
+	}		
+		
+</script>
+</body>
+</html>

@@ -1,0 +1,2917 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>        // temp conversion
+
+<p id="demo"></p>
+
+<script src="akz.js"></script>
+</body> 
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  var carName = "Volvo";
+  document.getElementById("demo1").innerHTML =
+  typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML =
+typeof carName;
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>         //shows date and time when click on button
+<html>
+<body>
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>              //shows date and time in button itself when click on button
+<body>
+
+<button onclick="this.innerHTML=Date()">The time is?</button>
+
+</body>
+</html>  
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the date.</p>             //using function on onclick
+<p id="demo"></p>
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html>    
+
+
+<!DOCTYPE html>
+<head>
+</head>
+  <body>
+    <p id="demo"></p>
+
+    <script >
+      var str="Hello MJ Hector Welcomes you"
+      var pos= str.indexOf("Welcomes");
+      var pos= str.lastIndexOf("you");
+      document.getElementById("demo").innerHTML=pos;
+    </script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+var x = 10;
+var y = 20;
+var z = x + y;
+document.getElementById("demo").innerHTML = z; // addition of 2 numbers
+document.getElementById("demo1").innerHTML ="The result is: " + x + y;  // displaying 1020
+</script>
+</body>
+</html> 
+
+<!DOCTYPE html>
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+<p>The toString() method can output numbers from base 2 to 36:</p>
+
+<p id="demo"></p>
+
+<script>
+var myNumber = 32;                  //convert numbers base
+document.getElementById("demo").innerHTML =
+"32 = " + "<br>" + 
+" Decimal " + myNumber.toString(10) + "<br>" +
+" Hexadecimal " + myNumber.toString(16) + "<br>" +
+" Octal " + myNumber.toString(8) + "<br>" +
+" Binary " + myNumber.toString(2);
+</script>
+
+</body>
+</html>   
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number Methods</h2>
+
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = 9.656;
+document.getElementById("demo").innerHTML =
+  x.toFixed(0) + "<br>" +
+  x.toFixed(2) + "<br>" +
+  x.toFixed(4) + "<br>" +
+  x.toFixed(6);
+</script>
+
+</body>
+</html> 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The slice() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,13);
+var res1 = str.slice(-12,-6);
+var res2 = str.slice(7);
+var res3 = str.substring(7,13); //similar to slice but substring donot accept negative values
+var res4 = str.substr(7,6);// 2nd arg represent length of string
+document.getElementById("demo").innerHTML = res; //banana
+document.getElementById("demo1").innerHTML = res1;//banana  
+document.getElementById("demo2").innerHTML = res2;
+document.getElementById("demo3").innerHTML = res3; //banana,kiwi
+document.getElementById("demo4").innerHTML = res4;
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number Methods</h2>
+
+<p>The toExponential() method returns a string, with the number rounded and written using exponential notation.</p>
+
+<p>An optional parameter defines the number of digits behind the decimal point.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+var x = 9.656;
+document.getElementById("demo").innerHTML =x.toExponential() + "<br>" + x.toExponential(2) + "<br>" + x.toExponential(4) + "<br>" + x.toExponential(6); //exponentil
+
+document.getElementById("demo1").innerHTML =
+  x.toFixed(0) + "<br>" +
+  x.toFixed(2) + "<br>" +
+  x.toFixed(4) + "<br>" +     //fixed
+  x.toFixed(6);
+
+
+document.getElementById("demo2").innerHTML = 
+  x.toPrecision() + "<br>" +
+  x.toPrecision(2) + "<br>" +
+  x.toPrecision(4) + "<br>" +    //toprecisiom
+  x.toPrecision(6); 
+
+
+
+document.getElementById("demo").innerHTML = 
+  x.valueOf() + "<br>" +
+  (123).valueOf() + "<br>" +  //return  number as number 
+  (100 + 23).valueOf();
+
+
+
+
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+<p>The toString() method can output numbers from base 2 to 36:</p>
+
+<p id="demo"></p>
+
+<script>
+var myNumber = 32;
+document.getElementById("demo").innerHTML =
+"32 = " + "<br>" + 
+" Decimal " + myNumber.toString(10) + "<br>" +
+" Hexadecimal " + myNumber.toString(16) + "<br>" +
+" Octal " + myNumber.toString(8) + "<br>" +
+" Binary " + myNumber.toString(2);
+</script>
+
+</body>
+</html> 
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>      //replacing a word
+  
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var txt = str.replace("Microsoft","W3Schools");
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number Object Properties</h2>
+
+<p>MAX_VALUE returns the largest possible number in JavaScript.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = Number.MAX_VALUE;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+
+<script>
+var cars = new Array("Saab", "Volvo", "BMW");
+document.getElementById("demo").innerHTML = cars[0];
+cars[2]="MJ Hector";//replacing bmw with mj hector
+document.getElementById("demo2").innerHTML=cars;//return full array
+document.getElementById("demo3").innerHTML = cars.length;//length of array
+document.getElementById("demo4").innerHTML = cars[cars.length-1];//accessing last elemnt in array
+
+
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+
+<p id="demo"></p>
+<p id="demo"></p>
+<script>1
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+//listing
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+document.getElementById("demo1").innerHTML = Array.isArray(fruits); // to check a variable array or not
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>toString()</h2>
+
+<p>The toString() method returns an array as a comma separated string:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();  //display array elements to string
+document.getElementById("demo1").innerHTML = fruits.join(" ");  //joins array elemenmts into a string
+</script>
+
+</body>
+</html>
+ 
+
+
+<!DOCTYPE html> 
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2>push() & ppop()</h2>
+
+
+
+<button onclick="myFunction1()">push</button>    push an element into the array when button is clicked
+<button onclick="myFunction2()">pop</button>
+<button onclick="myFunction3()">unshift</button>
+<button onclick="myFunction4()">shift</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+
+function myFunction1() {
+  fruits.push("Kiwi");
+  document.getElementById("demo1").innerHTML = fruits;
+}
+
+
+function myFunction2() {
+  fruits.pop();
+  document.getElementById("demo2").innerHTML = fruits;              //pop an element into an array
+}
+
+function myFunction4() {
+  fruits.shift();
+  document.getElementById("demo2").innerHTML = fruits;              //pop an element into an array
+}     //shift an element into an array means delete first elemet from an arrya
+                        //and indexes are lowered
+
+
+function myFunction3() {
+  fruits.unshift("Lemon");
+  document.getElementById("demo").innerHTML = fruits;  //adds a new element to an array (at the beginning), and "unshifts" older elements:
+}
+
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>splice()</h2>
+
+<p>The splice() method adds new elements to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction2()">Try it</button>
+
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = "Original Array:<br>" + fruits;               //using splice to add elemts
+function myFunction() {
+  fruits.splice(2, 0, "Lemon", "Kiwi");
+  document.getElementById("demo2").innerHTML = "New Array:<br>" + fruits;                      
+}
+
+var cars = ["BMW", "MJ Hector", "Rolls Royce", "Audi"];                                     //using splice to remove elemts
+document.getElementById("demo3").innerHTML = cars;
+function myFunction2() {
+  cars.splice(0, 1);
+  document.getElementById("demo4").innerHTML = cars;
+}
+
+</script>
+
+
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>concat()</h2>
+
+<p>The concat() method is used to merge (concatenate) arrays:</p>            
+<p id="demo"></p>
+
+<script>
+var myGirls = ["Cecilie", "Lone"];                        //array joining
+
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);
+
+document.getElementById("demo").innerHTML = myChildren;
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2>
+
+<h2>slice()</h2>
+
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];        //display  index 1 element to full elemnt in th array
+var citrus = fruits.slice(1);
+var citrus1 = fruits.slice(1,3);                       ////display index 1 elemnt to previously reprsednted index (here 2)  in th array
+
+document.getElementById("demo").innerHTML = fruits + "<br><br>" + citrus;
+document.getElementById("demo1").innerHTML = fruits + "<br><br>" + citrus1;
+
+
+
+</script>
+
+</body>
+</html>    
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+
+<p>The sort() method sorts an array alphabetically.</p>
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo3"></p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];              
+document.getElementById("demo3").innerHTML = fruits;
+
+function myFunction() {
+  fruits.sort();                                                    //array sorting
+  document.getElementById("demo1").innerHTML = fruits;
+  fruits.reverse();
+  document.getElementById("demo2").innerHTML = fruits;                //reverse of array sorting
+
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the button to sort the array in ascending order.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction1()">Try it</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+var points = [40, 100, 1, 5, 25, 10];                               //numeric sorting
+document.getElementById("demo").innerHTML = points;  
+
+function myFunction() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points;
+}
+
+
+document.getElementById("demo1").innerHTML = points;
+function myFunction1() {
+  points.sort(function(a, b){return b - a});                           //descending order
+  document.getElementById("demo1").innerHTML = points;
+}
+
+
+
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo"></p>
+
+<script>
+var points = [4000, 1200, 123, 54, 25, 10];                       // sorting array both in numerically and alphabetically
+document.getElementById("demo").innerHTML = points;  
+
+function myFunction1() {
+  points.sort();
+  document.getElementById("demo").innerHTML = points;
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = points;
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+
+<p>Click the button (again and again) to sort the array in random order.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo").innerHTML = points;                   //sort elements in araay at random order
+
+function myFunction() {
+  points.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById("demo").innerHTML = points;
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.map()</h2>
+
+<p>Creates a new array by performing a function on each array element.</p>
+
+<p id="demo"></p>
+
+<script>
+var numbers1 = [45, 4, 9, 16, 25];
+var numbers2 = numbers1.map(myFunction);                                              //array mapping
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value) {
+  return value * 2;
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.filter()</h2>
+
+<p>Creates a new array with all array elements that passes a test.</p>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25,18];
+var over18 = numbers.filter(myFunction);                                        //array filtering
+
+document.getElementById("demo").innerHTML = over18;
+
+function myFunction(value, index, array) {
+  return value >= 18;
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.reduce()</h2>
+
+<p>This example finds the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var sum = numbers.reduce(myFunction);                                       //array reduce means prodiuce single value 
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.reduceRight()</h2>
+
+<p>This example finds the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25];                                         //array reduce right produces single value (from right to left)
+var sum = numbers.reduceRight(myFunction);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.every()</h2>
+
+<p>The every() method checks if all array values pass a test.</p>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var allOver18 = numbers.every(myFunction);                                      //array every means checks all value in array
+
+document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.some()</h2>
+
+<p>The some() method checks if some array values pass a test.</p>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [45, 4, 9, 16, 25];
+var someOver18 = numbers.some(myFunction);                                                //array some chcks some values in array
+
+document.getElementById("demo").innerHTML = "Some over 18 is " + someOver18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.indexOf()</h2>
+
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Apple", "Orange", "Apple", "Mango"];                               //array index means search index position of an array elemnt
+var a = fruits.indexOf("Apple");
+document.getElementById("demo").innerHTML = "Apple is found in position " + a;
+</script>
+
+<p>The indexOf() does not work in Internet Explorer 8 and earlier versions.</p>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.lastIndexOf()</h2>
+
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["Apple", "Orange", "Apple", "Mango"]; 
+
+var a = fruits.lastIndexOf("Apple");             //same as Array.indexOf() but returns the position of the last occurrence of the specified element
+
+document.getElementById("demo").innerHTML = "Apple is found in position " + (a + 1);
+</script>
+
+<p>The lastIndexOf() does not work in Internet Explorer 8 and earlier versions.</p>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.find()</h2>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [4, 9, 16, 25, 29];                 // means find a particular elemnt in an array accoridng to given order in condn  ie is fcfs)
+var first = numbers.find(myFunction);
+
+document.getElementById("demo").innerHTML = "First number over 18 is " + first;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.findIndex()</h2>
+
+<p id="demo"></p>
+
+<script>
+var numbers = [4, 9, 16, 25, 29];
+var first = numbers.findIndex(myFunction);                              //similar to find but returns index postition of particulr find
+
+document.getElementById("demo").innerHTML = "First number over 18 has index " + first;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>  
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date(2017, 11, 24, 10, 33, 30, 0);                            //date (yr,month,day,hr,min,sec,millisec)
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p>A Date object can be created with a specified date and time:</p>        
+
+<p id="demo"></p>
+
+<script>
+var d = new Date("October 13, 2014 11:13:00");                                      //specified using date and tym
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p>Two digit years will be interpreted as 19xx:</p>                                       //2 digit yrs reprsn
+
+<p id="demo"></p>
+
+<script>
+var d = new Date(99, 11, 24);
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript ISO Dates</h2>
+
+<p>Separate date and time with a capital T.</p>
+
+<p>Indicate UTC time with a capital Z.</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date("2015-03-25T12:00:00Z");                   //Separate date and time with a capital T and Indicate UTC time with a capital Z.
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date("03/25/2015");                       //short date
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> 
+
+!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date("Mar 25 2015");                                              //long date
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Date.parse()</h2>
+
+<p>Date.parse() returns the number of milliseconds between the date and January 1, 1970:</p>
+
+<p id="demo"></p>
+
+<script>
+var msec = Date.parse("March 21, 2012");                                    //date .parse convert date into milliseconds
+document.getElementById("demo").innerHTML = msec;
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Date.parse(string) returns milliseconds.</p>
+<p>You can use the return value to convert the string to a date object:</p>
+
+<p id="demo"></p>
+
+<script>
+var msec = Date.parse("March 21, 2012");                                      //conversion of millisecinds to date
+var d = new Date(msec);
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript getTime()</h2>
+
+<p>The internal clock in JavaScript counts from midnight January 1, 1970.</p>
+<p>The getTime() function returns the number of milliseconds since then:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getTime();                      //gettime means returns no of milliseconds since 1970
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript getFullYear()</h2>
+
+<p>The getFullYear() method returns the full year of a date:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.getFullYear();             //get full year
+                                                                        // similarly getmonth() ----- to get correct month we add 1 
+                                                                      //similarly getday(),get hour(), getminute(), getseconds(), getmilliseconds()
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript getMonth()</h2>
+
+<p>The getMonth() method returns the month as a number:</p>
+
+<p>You can use an array to display the name of the month:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();                                                //display month in string using get and also we can display days using  var days
+var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("demo").innerHTML = months[d.getMonth()];     //getUTCDate()  Same as getDate(), but returns the UTC date
+                                                                      //getUTCDay() Same as getDay(), but returns the UTC day
+                                                                      //getUTCFullYear()  Same as getFullYear(), but returns the UTC year
+                                                                      //getUTCHours() Same as getHours(), but returns the UTC hour
+                                                                      //getUTCMilliseconds()  Same as getMilliseconds(), but returns the UTC milliseconds
+                                                                      //getUTCMonth() Same as getMonth(), but returns the UTC month
+                                                                      //getUTCSeconds() Same as getSeconds(), but returns the UTC seconds
+</script>
+
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript setFullYear()</h2>
+
+<p>The setFullYear() method sets the year of a date object:</p>
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+d.setFullYear(2020);                                                    //set fullyear, similarly we can setMonth(),setDate(),setHour(),setMinute(),
+document.getElementById("demo").innerHTML = d;                          //setSecond()
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+  text = "Today is before January 14, 2100.";                                     .//date comparison
+} else {
+  text = "Today is after January 14, 2100.";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>  
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Math</h2>
+
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+<p id="demo20"></p>
+<p id="demo21"></p>
+
+
+<script>
+document.getElementById("demo1").innerHTML = Math.PI;                            //returns pi value
+document.getElementById("demo2").innerHTML = Math.pow(8,2);                      //returns 8^2 
+document.getElementById("demo3").innerHTML = Math.round(4.4);           // returns 4 since round fn                                                  
+document.getElementById("demo4").innerHTML = Math.round(4.7);           // returns 5 since round fn
+document.getElementById("demo5").innerHTML = Math.sqrt(9);              //returns 3 
+document.getElementById("demo6").innerHTML = Math.abs(-4.4);             //returns positive integer
+document.getElementById("demo7").innerHTML = Math.ceil(4.4);             //returns 5 bcause after. any values it will round to nxt digit
+document.getElementById("demo8").innerHTML = Math.floor(4.6);             //returns 4 since after. any values it will round to prev digit
+document.getElementById("demo9").innerHTML = Math.sin(90* Math.PI / 180);       //returns sin value 
+document.getElementById("demo10").innerHTML = Math.cos(0* Math.PI / 180);       //returns cos value
+document.getElementById("demo11").innerHTML = Math.min(0, 150, 30, 20, -8, -200);       //returns min value in a set of values
+document.getElementById("demo12").innerHTML = Math.max(0, 150, 30, 20, -8, -200);       //returns max value in a set of values
+document.getElementById("demo13").innerHTML = Math.random();          //returns random nmbr between 0 & 1
+document.getElementById("demo").innerHTML = 
+"<p><b>Math.E:</b> " + Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +                          
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";                         // //RETURNS EULER NMBR
+                                                                          //RETURNS PI
+                                                                          //RETURNS SQRT OF 2
+                                                                          //RETURNS SQRT OF 1/2
+                                                                                           //RETURNS NATURAL LOG OF 2
+                                                                            //RETURNS NATURAL LOG OF 10
+                                                                      //RETURNS BASE 2 LOGARITHM OF E
+                                                                          // returns base 10 logarithm of E
+
+</script>
+
+</body>
+</html>  
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Math</h2>
+
+<p>RANDOM NMBRS</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo1").innerHTML =Math.floor(Math.random() * 11);                      //PRODUCE RANDOM NMBRS BETWEEN 0 AND 10
+document.getElementById("demo2").innerHTML =Math.floor(Math.random() * 11)+1;                    //PRODUCE RANDOM NMBRS BETWEEN 1 AND 11
+</script>
+
+</body>
+</html>   
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Comparisons</h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var age, voteable;
+  age = Number(document.getElementById("age").value);                             //chcks particular nmbr is > 18 or not or not a nmbr
+  if (isNaN(age)) {
+    voteable = "Input is not a number";                                           // Nan means Not a Legal
+  } else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("demo").innerHTML = voteable;
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var day;                                                                        //switch case to return corresponding day
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+var text = "";                                                          //FOR LOOP
+var i;
+for (i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p>A loop with a <b>break</b> statement.</p>
+
+<p id="demo"></p>
+
+<script>
+var text = "";                                              //break statement which get out from a loop
+var i;
+for (i = 0; i < 10; i++) 
+{
+  if (i === 3) 
+  { 
+  break;
+  }
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p>A loop with a <b>continue</b> statement.</p>
+
+<p>A loop which will skip the step where i = 3.</p>
+
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;                                                      //continue stmnt skip from a loop
+for (i = 0; i < 10; i++) 
+{
+  if (i === 3) 
+  { 
+  continue; 
+  }
+  text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Search a string for "W3Schools", and display the position of the match:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Visit W3Schools!"; 
+var n = str.search("W3Schools");
+document.getElementById("demo").innerHTML = n;                                    //search word 
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Search a string for "w3Schools", and display the position of the match:</p>
+
+<p id="demo"></p>
+
+<script>
+var str = "Visit W3Schools!";                                                                 // //search word  using regular exprsn
+var n = str.search(/w3Schools/i);
+document.getElementById("demo").innerHTML = n;
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Replace "microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft and Microsoft!</p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo").innerHTML; 
+  var txt = str.replace(/microsoft/i,"W3Schools");                                                    //replacing word with using regular exprsn
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Search for an "e" in the next paragraph:</p>
+
+<p id="p01">The best things in life are free!</p>
+
+<p id="demo"></p>
+
+<script>
+text = document.getElementById("p01").innerHTML;                                    //search s word using regular exprsn and returns true or flase
+document.getElementById("demo").innerHTML = /e/.test(text);
+</script>
+
+</body>
+</html> 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p id="demo"></p>
+
+<script>
+var obj = /T/.exec("The best things in life are free!");     //searches a string for a diff pattern, and returns the found text as an object.
+document.getElementById("demo").innerHTML =
+"Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+</script>
+
+</body>
+</html>  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="demo1"></p>
+
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("demo1");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";                                        //try , catch, throw example
+    x = Number(x);
+    if(x < 5)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please input a number between 5 and 10:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  var message, x;
+  message = document.getElementById("p01");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "is empty";
+    if(isNaN(x)) throw "is not a number";                               //TRY, CATCH, FINALLY EXAMPLE
+    x = Number(x);
+    if(x > 10)   throw "is too high";
+    if(x < 5)  throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("demo").value = "";
+  }
+}
+</script>
+
+</body>
+</html>  
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x; // Declare x
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("demo"); // Hoisting
+elem.innerHTML = x;           // Display x in the element
+</script>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+
+<p>In this example, <b>this</b> represents the <b>person</b> object.</p>
+<p>Because the person object "owns" the fullName method.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;       //this keyword
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>  //this in event handler
+v
+<button onclick="this.style.display='none'">Click to Remove Me!</button>
+
+</body>
+</html> 
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript <i>this</i> Keyword</h2>
+<p>In this example <strong>this</strong> refers to person2, even if it is a method of person1:</p>
+
+<p id="demo"></p>
+
+<script>
+var person1 = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+var person2 = {
+  firstName:"John",
+  lastName: "Doe",
+}
+var x = person1.fullName.call(person2); // call  in this keyword
+document.getElementById("demo").innerHTML = x; //display jjohn doe
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Declaring a Variable Using let</h2>
+
+<p id="demo"></p>
+
+<script>
+var  x = 10;                      // variables declaration using let keyword
+// Here x is 10
+{  
+  let x = 2;
+  // Here x is 2
+}
+// Here x is 10
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Declaring a Variable Using const</h2>
+
+<p id="demo"></p>
+
+<script>
+var  x = 10;
+// Here x is 10
+{  
+  const x = 2;                          // const - assisgned during declared
+  // Here x is 2
+}
+// Here x is 10
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>Declaring a constant object does NOT make the objects properties unchangeable:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// Change a property:
+car.color = "red";                  hoisting NA in const
+
+// Add a property:
+car.owner = "Johnson";                              // const object
+
+// Display the property:
+document.getElementById("demo").innerHTML = "Car owner is " + car.owner; 
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Function</h2>
+
+<p>This example shows the syntax of an Arrow Function, and how to use it.</p>
+
+<p id="demo"></p>
+
+<script>
+var hello;                            // arrow function
+
+hello = () => {
+  return "Hello World!";
+}
+
+document.getElementById("demo").innerHTML = hello();
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Function</h2>
+
+<p>This example shows an Arrow Function with a parameter.</p>
+
+<p id="demo"></p>
+
+<script>
+var hello;
+
+hello = (val) => "Hello " + val;     // arrrow fn with parameteers
+
+document.getElementById("demo").innerHTML = hello("Universe!");
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class</h2>
+
+<p>In this example we demonstrate a simple class definition and how to use it.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = mycar.carname;
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class</h2>
+
+<p>In this example we demonstrate a simple class definition and how to use it.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;                 //class keyword
+  }
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = mycar.carname;
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Method</h2>
+
+<p>Pass a parameter into the "present()" method.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;                                                 // class with param passing
+  }
+  present(x) {
+    return x + ", I have a " + this.carname;
+  }
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = mycar.present("Hello");
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Static Methods</h2>
+
+<p>A static method is created with the "static" keyword, and you can only call the method on the class itself.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;                                           //static method.... displays Hello
+  }
+  static hello() {
+    return "Hello!!";
+  }
+}
+
+mycar = new Car("Ford");
+
+//Call 'hello()' on the class Car:
+document.getElementById("demo").innerHTML = Car.hello();
+
+//and NOT on the 'mycar' object:
+//document.getElementById("demo").innerHTML = mycar.hello();
+//this would raise an error.
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Static Methods</h2>
+
+<p>To use the "mycar" object inside the static method, you can send it as parameter.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  static hello(x) {
+    return "Hello " + x.carname;                      // static method .....displays Hello Ford
+  }
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = Car.hello(mycar);
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Inheritance</h2>
+
+<p>Use the "extends" keyword to inherit all methods from another class.</p>
+<p>Use the "super" method to call the parent's constructor function.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;                                                           //class inheritance
+  }
+  show() {
+    return this.present() + ', it is a ' + this.model;
+  }
+}
+
+mycar = new Model("Ford", "Mustang");
+document.getElementById("demo").innerHTML = mycar.show();
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class Gettter/Setter</h2>
+
+<p>A demonstration of how to add getters and setters in a class, and how to use the getter to get the property value.</p>
+
+<p id="demo"></p>
+
+<script>
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  get cnam() {
+    return this.carname;
+  }
+  set cnam(x) {
+    this.carname = x;                                 //getters and setters
+  }
+}
+
+mycar = new Car("Ford");
+
+document.getElementById("demo").innerHTML = mycar.cnam;
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Classes are not hoisted</h2>
+
+<p>You will get an erorr if you try to use a class before it is declared.</p>
+
+<p id="demo"></p>
+
+<script>
+//You cannot use the class yet.
+//mycar = new Car("Ford")
+//This would raise an error.
+
+class Car {
+  constructor(brand) {
+    this.carname = brand;                           //javascript classes are not hoisted
+  }
+}
+
+//Now you can use the class:
+mycar = new Car("Ford")
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);                           //debugging in console
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Never create strings as objects.</p>
+<p>Strings and objects cannot be safely compared.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = "John";        // x is a string
+var y = new String("John");  // y is an object
+document.getElementById("demo").innerHTML = x===y;                          //cannot compare strings and objects
+</script>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x1 = {};
+var x2 = "";
+var x3 = 0;
+var x4 = false;                                                     // donot use new()
+var x5 = [];
+var x6 = /()/;
+var x7 = function(){};
+
+document.getElementById("demo").innerHTML =
+"x1: " + typeof x1 + "<br>" +
+"x2: " + typeof x2 + "<br>" +
+"x3: " + typeof x3 + "<br>" +
+"x4: " + typeof x4 + "<br>" +
+"x5: " + typeof x5 + "<br>" +
+"x6: " + typeof x6 + "<br>" +
+"x7: " + typeof x7 + "<br>";
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Setting a default value to a function parameter.</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 0;
+  }  
+  return x * y;
+}
+document.getElementById("demo").innerHTML = myFunction(4);
+</script>
+
+</body>
+</html> 
+
+  
+
+
+
+  <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+var txt = '{"name":"John", "age":30, "city":"New York"}'
+var obj = JSON.parse(txt);                                                                //JSON .PARSE CONVERTS STRING TO  OBJECT
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create JSON string from a JavaScript object.</h2>
+
+<p id="demo"></p>
+
+<script>
+var obj = { name: "John", age: 30, city: "New York" };
+var myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;                               // create json strng from object
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html> 
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+
+<script>
+document.scripts;                                 //DOM
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript can Change HTML</h2>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";            //DOM changing by html content
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="image" src="smiley.gif" width="160" height="120">
+
+<script>
+document.getElementById("image").src = "landscape.jpg";             //DOM changing attribute
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.fontFamily = "Arial";                 //DOM changing html style
+document.getElementById("p2").style.fontSize = "larger";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">DOM USING EVENTS</h1>        
+
+<button type="button" onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button onmouseover="myFunction()"  onclick="mySecondFunction()" onmouseout="myThirdFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";  //onclick onmouseover
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First JavaScript Animation</h1>
+
+<div id="animation">My animation will go here</div>
+
+</body>
+</html> 
+
+
+<!Doctype html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: lightblue;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: orange;
+}
+</style>
+<body>
+
+<h2>My First JavaScript Animation</h2>
+
+<div id="container">
+<div id="animate"></div>
+</div>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+#container11 {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate11 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: blue;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Click to move red</button></p> 
+<p><button onclick="myMove11()">Click to mmove blue</button></p> 
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+<div id ="container11">
+  <div id ="animate11"></div>
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 50;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px";                       //DOM ANIMATION
+    }
+  }
+}
+
+function myMove11() {
+  var elem = document.getElementById("animate11");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+
+
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="this.innerHTML='Ooops!'">Click on this text! ( DOM CHANGING EVENTS )</h1>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="changeText(this)">Click on this text!  ( DOM CHANGING EVENTS USING FUNCTION )</h1>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the date.</p>
+
+<button onclick="thedate()">The time is?</button>
+
+<script>
+function thedate() {
+  document.getElementById("demo").innerHTML = Date();             //DOM EVENT TO CHCK DATE
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");                 // DOM onchange fn
+  x.value = x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+</body>
+</html> 
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:lightblue;width:120px;height:20px;padding:40px;">Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You";                    //DOM MOUSEOVER CHANGE
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me";
+}
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";                       //DOM MOUSEUP AND MOUSEDOWN
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = 
+document.getElementById("id01").innerHTML; //retrieves the text of an <h1> element and copies it into a <p> element.........DOM NAVIGATION
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue; //retrieves the text of an <h1> element and copies it into a <p> element
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS </title>
+</head>
+<body>
+
+<form>
+  <label>Name: </label>
+    <input  type="text" id="message" >
+    <button type="button" onclick="myfunction()" >Click Here!!</button>
+</form>
+<script>
+
+function myfunction() {
+alert(message.value);                 //name alert by acessing id
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS </title>
+</head>
+<body>
+
+<form>
+  <label>Name: </label>
+    <input  type="text" id="message" >
+    <button type="button" onclick="myfunction()" >Click Here!!</button>
+</form>
+<script>
+
+function myfunction() {
+var abc= document.getElementById('message').value;  //name alert by using document.getelement
+alert(abc);
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS </title>
+</head>
+<body>
+
+<form>
+  <label>Name: </label>
+    <input  type="text" id="message" >
+    <button type="button" id="mybtn" >Click Here!!</button>
+</form>
+<script>
+document.getElementById("mybtn").addEventListener("click", myfunction);
+function myfunction() {
+var abc= document.getElementById('message').value; // name alert display listener
+alert(abc);
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>"; //event listener to add many events
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+
+</body>
+</html>  
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method on the window object.</p>
+
+<p>Try resizing this browser window to trigger the "resize" event handler.</p>
+
+<p id="demo"></p>
+
+<script>
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = Math.random();  //window objects
+});
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+
+<div>
+<p>The DOM is very useful!</p>
+<p>This example demonstrates the <b>document.documentElement</b> property.</p>
+</div>
+
+<script>
+alert(document.documentElement.innerHTML); //display all between <head> and </body>
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Hello World!</p>
+
+<div>
+<p>The DOM is very useful!</p>
+<p>This example demonstrates the <b>document.body</b> property.</p>
+</div>
+
+<script>
+alert(document.body.innerHTML);     //display all between <body> and </body>
+</script>
+
+</body>
+</html>  
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h6 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;   //display tag name 
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType; //respresent node type
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p id="demo"></p>
+
+<script>
+var myCollection = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML =
+"The innerHTML of the second paragraph is: " +
+myCollection[1].innerHTML;              //using getElementsByTagName
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var myCollection = document.getElementsByTagName("p");
+  var i;
+  for (i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = "red"; //using getElementsByTagName change colour of txt
+  }
+}
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");         //append child
+para.appendChild(node);
+var element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+</body>
+</html> 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");            //using insertBefore
+var child = document.getElementById("p1");
+element.insertBefore(para,child);
+</script>
+
+</body>
+</html>  
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div>
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+
+<button onclick="myFunction()">Remove Element</button>
+
+<script>
+function myFunction() {
+  var elmnt = document.getElementById("p1");      
+  elmnt.remove();                             //remove existing element
+}
+</script>
+
+</body>
+</html>  
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+parent.removeChild(child);                      //remove child element
+</script>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");   //replacing a child html element
+para.appendChild(node);
+parent.replaceChild(para,child);
+</script>
+
+</body>
+</html>  -->
