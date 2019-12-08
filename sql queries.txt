@@ -1,0 +1,138 @@
+sql>>>>>
+
+ //creating table
+CREATE TABLE vehicle (
+    Carname varchar(50),
+    Carcost int(50)
+);
+-------------------------------------------------------------------------------------------------------------------------------------
+ //inserting values
+INSERT INTO vehicle (Carname, Carcost) VALUES ('Maruthi','50');
+INSERT INTO vehicle (Carname, Carcost) VALUES ('MG_HECTOR','100');
+INSERT INTO vehicle (Carname, Carcost) VALUES ('Freestyle','70');
+INSERT INTO vehicle (Carname, Carcost) VALUES ('Tiago','50');
+INSERT INTO vehicle (Carname, Carcost) VALUES ('Hyundai','20');
+INSERT INTO vehicle (Carname, Carcost) VALUES ('BMW','150');
+
+INSERT INTO vehicle VALUES ('Audi','Q5'); //another type we can insert values
+-------------------------------------------------------------------------------------------------------------------------------------
+//Selecting values
+SELECT Carname FROM vehicle;  //display Carname coloumn in vehicle table
+
+SELECT * FROM vehicle;       //display all records in vehicle table
+
+SELECT DISTINCT Carname FROM vehicle;    //display different values in a table not includes duplicates
+
+SELECT COUNT(DISTINCT Carname) FROM vehicle;	//dispplays distinct number of records in carname column
+-------------------------------------------------------------------------------------------------------------------------------------
+//where clause, LIKE, IN, operators
+SELECT * FROM vehicle WHERE Carname='BMW';     //which display all records with Carname BMW
+
+SELECT * FROM vehicle WHERE Carname LIKE 'm%';  //which display all records with Carname start with M
+
+SELECT * FROM vehicle WHERE Carcost IN ('70');	//which display all records were Carcost having 70
+
+SELECT * FROM vehicle WHERE Carcost = 50;	//which display all records with Carcost=50
+
+SELECT * FROM vehicle WHERE Carcost > 30;   //which display all records with Carcost>30
+
+-------------------------------------------------------------------------------------------------------------------------------------
+//AND, OR, NOT
+
+SELECT * FROM vehicle  WHERE Carname='BMW' AND Carcost = 50;	//which display all records with Carcost=30 and with Carname='BMW'
+
+SELECT * FROM vehicle  WHERE Carname='BMW' OR Carcost = 50;	//which display all records with Carcost=30 or with Carname='BMW'
+
+SELECT * FROM vehicle  WHERE NOT Carname='BMW';			//which display all records except Carname='BMW'
+
+SELECT * FROM vehicle WHERE Carname='BMW' AND (Carcost=50 OR Carcost=30);	//which display all records with Carname='BMW' and carcost having 30 or 50
+--------------------------------------------------------------------------------------------------------------------------------------
+//ORDER BY
+
+SELECT * FROM vehicle ORDER BY Carname;		//display all records in order of car name
+
+SELECT * FROM vehicle ORDER BY Carcost DESC;	 	//display all records in descending order of carcost
+
+SELECT * FROM vehicle ORDER BY Carname,Carcost;	    //orders by Carname, but if some rows have the same Carname, it orders them by Carcost:
+---------------------------------------------------------------------------------------------------------------------------------------
+NULL AND NOT NULL
+
+SELECT Carname,Carcost FROM vehicle WHERE Carcost IS NULL;
+
+-----------------------------------------------------------------------------------
+//update table
+
+UPDATE vehicle SET Carcost = 150 WHERE Carname = 'BMW';
+
+--------------------------------------------------------------------------------------
+//delete statement
+DELETE FROM vehicle WHERE Carname='Audi';	//delete record where carname is audi
+DELETE FROM vehicle;   	// delete all records from vehicle table
+
+---------------------------------------------------------------------------------
+//LIMIT
+SELECT * FROM vehicle LIMIT 3;   //select specific rows from table
+SELECT * FROM vehicle WHERE Carname='BMW' LIMIT 3;  //retirves all data with carname=bmw with first 3 rows
+       
+-----------------------------------------------------------------------------------------------------------
+//min,max,sum,avg,count
+SELECT MIN(Carcost) FROM vehicle;	//select min value from carcost column
+SELECT MAX(Carcost) FROM vehicle;	////select max value from carcost column
+SELECT COUNT(Carcost) FROM vehicle;	//display number of records ifrom vehicle table
+SELECT AVG(Carcost) FROM vehicle;	//display average of carcost
+SELECT SUM(Carcost) FROM vehicle;	// display sumation of field carcost
+
+--------------------------------------------------------------------------------------------------
+//LIKE  & NOT LIKE
+SELECT * FROM Carname WHERE Carname NOT LIKE 'a%';
+SELECT * FROM Carname WHERE Carname LIKE 'b%';
+----------------------------------------------------------------------------------------------------
+//in
+SELECT * FROM vehicle WHERE Carname IN ('Freestyle', 'Tiago', 'Maruthi');   //display all details with carname in freestyle, maruthi, tiago
+SELECT * FROM vehicle WHERE Carname NOT IN ('Freestyle', 'Tiago', 'Maruthi');   //display all details with carname in freestyle, maruthi, tiago
+
+---------------------------------------------------------------------------------------------------------------------------
+//BETWEEN
+SELECT * FROM vehicle WHERE Carcost BETWEEN 50 AND 100;		////display Carcost between 50 and 100
+SELECT * FROM vehicle WHERE Carcost NOT BETWEEN 50 AND 100;	//display not Carcost between 50 and 100
+------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------
+//BETWEEN AND IN
+
+SELECT * FROM vehicle WHERE Carcost BETWEEN 50 AND 100 AND NOT Carname IN ('BMW');	//display carcost between 50 and 100 and not carname in bmw
+-----------------------------------------------------------------------------------------------------------------------------
+//BETWEEN with TEXT VALUES
+
+SELECT * FROM vehicle WHERE Carname BETWEEN "Tiago" AND "Freestyle" ORDER BY Carcost;   //display all records where carname between tiago and freestyle with carcost in aso
+SELECT * FROM vehicle WHERE Carname NOT BETWEEN "Tiago" AND "Freestyle" ORDER BY Carcost;   //display all records where carname between tiago and freestyle with carcost in aso
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//ALIASES
+
+SELECT Carcost AS COSTCAR, Carname AS NAMECAR FROM vehicle;   //Alias for Columns
+
+-------------------------------------------------------------------------------------------------------------------------------------
+//UNION (SELECTS ONLY DISTINCT VALUES)***not created table
+
+SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
+SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2 where condition;
+SELECT Carname FROM vehicle UNION SELECT Carname FROM customer ORDER BY Carname;
+---------------------------------------------------------------------------------------------------------------------------------------
+//UNION ALL(INCLUDE DUPLICATES)
+
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
+---------------------------------------------------------------------------------------------------------------------------------------
+//GROUP BY 
+
+SELECT Carname, SUM(Carcost) FROM vehicle GROUP BY Carname;
+------------------------------------------------------------------------------------------------
+//HAVING (USED WHEN WHERE CLAUSE CANNOT BE USED DURING AGGREGATE FNS USED)
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body>
+	<h1>Form Validation</h1>
+	<label>Enter Username</label><br>	
+	<input type = "text" id = "username" onblur="validate()">
+	<div id="us"></div><br><br>
+	<label>Enter Email id</label><br>	
+	<input type = "text" id = "email" onblur="validate()">
+	<div id="em"></div><br><br>
+	<label>Enter Password</label><br>
+	<input type = "password" id = "passwd" onblur="validate()">
+	<div id="pd"></div><br><br>
+	<label>Enter Phone number</label><br>
+	<input type = "number" id = "phnumber" onblur="validate()">
+	<div id="nm"></div><br><br>
+ 	<button onclick = "validate()">Submit</button><br><br>
+<script type="text/javascript">
+	function validate()
+	{
+		var uname = document.getElementById("username").value;
+		var emailid= document.getElementById("email").value;
+		var pwd= document.getElementById("passwd").value;
+		var pnum= document.getElementById("phnumber").value;
+		var letters = /^[A-Za-z]+$/;
+		if (uname==="")
+		{
+			document.getElementById("us").innerHTML="Name must be filled";
+			document.getElementById("us").style.color="Red";
+		}
+
+		else if(uname.length>20)
+		{
+			document.getElementById("us").innerHTML="Name should not be more than 20 characters";
+			document.getElementById("us").style.color="Red";
+		}
+		else if(uname.length<3)
+		{
+			document.getElementById("us").innerHTML="Name should not be less than 3 characters";
+			document.getElementById("us").style.color="Red";
+		}
+		else if(!(uname.match(letters)))
+     	{
+			document.getElementById("us").innerHTML="Only alphabetical characters are possible";
+			document.getElementById("us").style.color="Red";
+        }
+		else
+		{
+			document.getElementById("us").innerHTML="";
+		}
+
+		if(emailid==="")
+		{
+			document.getElementById("em").innerHTML="Email must be filled";
+			document.getElementById("em").style.color="Red";
+		}
+		else if(!(emailid.indexOf("@")>-1))
+		{
+			document.getElementById("em").innerHTML="Enter correct mail id";
+			document.getElementById("em").style.color="Red";
+		}
+		else
+		{
+			document.getElementById("em").innerHTML="";
+		}
+
+		if(pwd==="")
+		{
+			document.getElementById("pd").innerHTML="Password must be filled";
+		    document.getElementById("pd").style.color="Red";
+		}
+		else if(pwd.length<6)
+		{
+			document.getElementById("pd").innerHTML="Password should contain min 6 characters";
+			document.getElementById("pd").style.color="Red";
+		}
+		else 
+		{
+			document.getElementById("pd").innerHTML=""; 
+		}	
+		if(pnum==="")
+		{
+			document.getElementById("nm").innerHTML="Phone number must be filled";
+		    document.getElementById("nm").style.color="Red";
+		}
+		else if(pnum.length>10)
+		{
+			document.getElementById("nm").innerHTML="Phone number should not be 10 more than characters";
+			document.getElementById("nm").style.color="Red";
+		}
+		else if(pnum.length<10)
+		{
+			document.getElementById("nm").innerHTML="Phone number must be 10 characters";
+			document.getElementById("nm").style.color="Red";
+		}
+		else
+		{
+			document.getElementById("nm").innerHTML="";
+		}
+
+	}
+</script> 	
+</body>
+</html>
